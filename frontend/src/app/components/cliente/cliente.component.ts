@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Cliente } from 'src/app/model/cliente.model';
+import { Cliente } from '../model/cliente.model';
+
 import { ClienteViewComponent } from './cliente-view/cliente-view.component';
 
 @Component({

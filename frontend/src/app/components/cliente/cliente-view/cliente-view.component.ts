@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Cliente } from 'src/app/model/cliente.model';
+import { Cliente } from './../../model/cliente.model';
 
 @Component({
   selector: 'app-cliente-view',

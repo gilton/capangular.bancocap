@@ -1,8 +1,8 @@
- <mat-sidenav-container class="container"> <!--container -->
+<mat-sidenav-container class="container"> <!--container -->
     <mat-sidenav class="sidenav" mode="side"
      opened fixedInViewport="true" fixedTopGap="64"> <!--sidenav -->
         <mat-nav-list class="nav-list"> <!-- lista-->
-            <a mat-list-item routerLink="/home">
+            <a mat-list-item routerLink="/">
                 <i class="material-icons">
                     home
                 </i>
@@ -19,6 +19,30 @@
                     savings
                 </i>
                 Conta
+            </a>
+            <a mat-list-item routerLink="/depositos">
+                <i class="material-icons">
+                    add
+                </i>
+                Depósito
+            </a>
+            <a mat-list-item routerLink="/saques">
+                <i class="material-icons">
+                    remove
+                </i>
+                Saque
+            </a>
+            <a mat-list-item routerLink="/transferencias">
+                <i class="material-icons">
+                    social_distance
+                </i>
+                Transferência
+            </a>
+            <a mat-list-item routerLink="/extratos">
+                <i class="material-icons">
+                    request_quote
+                </i>
+                Extrato
             </a>
         </mat-nav-list>
     </mat-sidenav>

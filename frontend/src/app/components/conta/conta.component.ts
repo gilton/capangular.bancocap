@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Cliente } from 'src/app/model/cliente.model';
-import { Conta } from 'src/app/model/conta.model';
+
 import * as objectHash from 'object-hash';
+import { Cliente } from '../model/cliente.model';
+import { Conta } from '../model/conta.model';
 
 @Component({
   selector: 'app-conta',
@@ -17,7 +18,7 @@ export class ContaComponent implements OnInit {
   hash: any;
 
   conta: Conta ={
-    hash: '',
+    hcode: '',
     cliente: {
       cpf: '', 
       nome: ''
@@ -43,7 +44,7 @@ export class ContaComponent implements OnInit {
   criarConta(): void {
     alert("Conta criada com sucesso!");
     this.encontrarClientePorNome(this.selectedValue)
-    this.conta.hash = this.hash;
+    this.conta.hcode = this.hash;
     console.log(this.conta);
   }
 
