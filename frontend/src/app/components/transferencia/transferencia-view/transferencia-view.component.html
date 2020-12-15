@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-title>Detalhes da Transferência</mat-card-title>
+    
+    <mat-grid-list cols="2" rowHeight="6:1">
+        <mat-grid-tile class="item"><strong>Cliente Origem:</strong></mat-grid-tile>
+        <mat-grid-tile class="item-exibido">{{mock_transferencia.contaOrigem.cliente.nome}}</mat-grid-tile>    
+        <mat-grid-tile class="item"><strong>Data:</strong></mat-grid-tile>
+        <mat-grid-tile>{{mock_transferencia.data}}</mat-grid-tile>       
+        <mat-grid-tile class="item"><strong>HashOrigem:</strong></mat-grid-tile>
+        <mat-grid-tile>{{mock_transferencia.contaOrigem.hcode}}</mat-grid-tile>       
+        <mat-grid-tile class="item"><strong>Cliente Destino:</strong></mat-grid-tile>
+        <mat-grid-tile>{{mock_transferencia.contaDestino.cliente.nome}}</mat-grid-tile>       
+        <mat-grid-tile class="item"><strong>HashDestino:</strong></mat-grid-tile>
+        <mat-grid-tile>{{mock_transferencia.contaDestino.hcode}}</mat-grid-tile>       
+        <mat-grid-tile class="item"><strong>Valor:</strong></mat-grid-tile>
+        <mat-grid-tile>{{mock_transferencia.valor}}</mat-grid-tile>       
+    </mat-grid-list>
+
+    <button mat-raised-button routerLink="/transferencias" color="primary">
+        Voltar
+    </button>    
+    
+</mat-card>

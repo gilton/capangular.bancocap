@@ -1,0 +1,52 @@
+<mat-card>
+    <div *ngIf="transferenciaForm.invalid && transferenciaForm.dirty"
+        class="alert alert-danger">
+        Preencha todos os campos corretamente!
+    </div>
+
+    <mat-card-title>Operação de Transferência</mat-card-title>
+    <form (ngSubmit)="onSubmit(transferenciaForm)" #transferenciaForm="ngForm" autocomplete="off" >
+        <div><b>Data:</b> {{horaAgora}}</div>
+        <br>
+        <mat-form-field>
+            <input matInput placeholder="Hash da Conta de origem"          
+            required
+            [(ngModel)]="transferencia.contaOrigem.hcode" name="hashOrigem" #hashOrigem="ngModel"
+            minlength="40" maxlength="40">
+        </mat-form-field>
+        <div [hidden]="hashOrigem.valid || hashOrigem.pristine"
+            class="alert alert-danger">
+            Hash da conta de Origem é obrigatório e deve ter 40 caracteres!
+        </div>
+        <mat-form-field>
+            <input matInput placeholder="Hash da conta de destino"            
+            required
+            [(ngModel)]="transferencia.contaDestino.hcode" name="hashDestino" #hashDestino="ngModel"
+            minlength="40" maxlength="40">
+        </mat-form-field>
+        <div [hidden]="hashDestino.valid || hashDestino.pristine"
+            class="alert alert-danger">
+            Hash é obrigatório e deve ter 40 caracteres!
+        </div>
+        <mat-form-field>
+            <input matInput currencyMask placeholder="Valor"
+            required
+            min="1" max="1000.00"
+            [(ngModel)]="transferencia.valor" name="valor" #valor="ngModel">
+            <div [hidden]="valor.valid || valor.pristine"
+                class="alert alert-danger">
+                Valor é obrigatório e deve ser acima de 0, até R$1.000,00!
+            </div>
+        </mat-form-field>        
+    </form>
+
+    <button type="submit" mat-raised-button [disabled]="!transferenciaForm.form.valid"
+            routerLink = {{this.rotaNovaTransferencia}} color="primary">
+            Salvar
+    </button>
+
+    <button mat-raised-button (click)="transferenciaForm.reset()">
+        Cancelar
+    </button>
+
+</mat-card>

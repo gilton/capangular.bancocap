@@ -39,6 +39,9 @@ import { TransferenciaComponent } from './components/transferencia/transferencia
 import { LoginComponent } from './components/login/login.component';
 import { recuperarSenhaComponent } from './components/recuperarSenha/recuperarSenha.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
+import { DepositoViewComponent } from './components/deposito/deposito-view/deposito-view.component';
+import { SaqueViewComponent } from './components/saque/saque-view/saque-view.component';
+import { TransferenciaViewComponent } from './components/transferencia/transferencia-view/transferencia-view.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -58,10 +61,13 @@ const maskConfig: Partial<IConfig> = {
     LoginComponent,
     UsuarioComponent,
     recuperarSenhaComponent,
-    DepositoComponent,
     ExtratoComponent,
     SaqueComponent,
-    TransferenciaComponent
+    SaqueViewComponent,
+    DepositoComponent,
+    DepositoViewComponent,
+    TransferenciaComponent,
+    TransferenciaViewComponent
   ],
   imports: [
     BrowserModule,

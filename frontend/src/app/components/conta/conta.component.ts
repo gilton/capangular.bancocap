@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 
 import * as objectHash from 'object-hash';
-import { Cliente } from '../model/cliente.model';
-import { Conta } from '../model/conta.model';
+import { Cliente } from '../../model/cliente.model';
+import { Conta } from 'src/app/model/conta.model';
 
 @Component({
   selector: 'app-conta',

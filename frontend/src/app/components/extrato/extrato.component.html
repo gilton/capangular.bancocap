@@ -1,0 +1,36 @@
+<mat-card>    
+    <mat-card-title>Operação Extrato</mat-card-title>
+    
+    <div class="table-striped">
+        <table class="table" border="1">
+            <tr>
+              <td><b>Data</b></td>
+              <td><b>Valor</b></td>
+              <td><b>Operação</b></td>
+              <td><b>Hash</b></td>              
+            </tr>
+          
+            <tr *ngFor="let operacao of rowData">
+              <td>{{operacao.data}}</td>
+              <td>{{operacao.valor | currency:'BRL':true}}</td>
+              <td>{{operacao.tipoOperacao}}</td>
+              <td>{{operacao.hashOrigem}}</td>
+            </tr>
+          </table>
+    </div>
+
+    <!-- <ag-grid-angular
+      style="width: 870px; height: 300px;"
+      class="ag-theme-alpine"
+      [rowData]="rowData"
+      [columnDefs]="columnDefs">
+    </ag-grid-angular> -->
+
+    <button mat-raised-button routerLink="/" color="primary">
+        Fechar
+    </button>   
+    
+</mat-card>
+
+
+

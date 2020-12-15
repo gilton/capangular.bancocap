@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Conta } from '../../model/conta.model';
+import { Conta } from 'src/app/model/conta.model';
+
 
 
 @Component({
